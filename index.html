@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โฮมสเตย์บีชเกาะช้าง - โรงแรมขนาดเล็กที่สวยงาม</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><i class="fas fa-umbrella-beach"></i> โฮมสเตย์บีชเกาะช้าง</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">หน้าแรก</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#rooms" class="nav-link">ห้องพัก</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#packages" class="nav-link">แพ็คเกจ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">ติดต่อสอบถาม</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>ยินดีต้อนรับสู่โฮมสเตย์บีชเกาะช้าง</h1>
+            <p>ประสบการณ์การพักผ่อนที่อบอุ่น ใกล้ชิดธรรมชาติ และวิวทะเลที่สวยงาม</p>
+            <div class="hero-buttons">
+                <a href="#rooms" class="btn btn-primary">จองห้องพัก</a>
+                <a href="#packages" class="btn btn-secondary">ดูแพ็คเกจ</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-slider">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="โฮมสเตย์บีชเกาะช้าง">
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="ห้องพักสวยงาม">
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="วิวทะเลสวยงาม">
+                </div>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>เกี่ยวกับเรา</h2>
+                <p>โฮมสเตย์บีชเกาะช้างตั้งอยู่ใจกลางเกาะช้าง ใกล้ชายหาดที่สวยงาม เราให้บริการห้องพักที่สะอาด สะดวกสบาย พร้อมวิวทะเลที่สวยงาม และบรรยากาศที่อบอุ่นเหมือนอยู่บ้าน</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-wifi"></i>
+                        <h3>WiFi ฟรี</h3>
+                        <p>อินเทอร์เน็ตความเร็วสูง</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-parking"></i>
+                        <h3>ที่จอดรถฟรี</h3>
+                        <p>พื้นที่จอดรถกว้างขวาง</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-utensils"></i>
+                        <h3>อาหารเช้า</h3>
+                        <p>อาหารเช้าสไตล์ไทย</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms">
+        <div class="container">
+            <h2>ห้องพักของเรา</h2>
+            <div class="rooms-grid">
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ห้องสแตนดาร์ด">
+                    </div>
+                    <div class="room-content">
+                        <h3>ห้องสแตนดาร์ด</h3>
+                        <p>ห้องพักสะอาด สะดวกสบาย พร้อมเครื่องปรับอากาศ และห้องน้ำในตัว</p>
+                        <ul>
+                            <li><i class="fas fa-bed"></i> เตียงคู่ 1 เตียง</li>
+                            <li><i class="fas fa-users"></i> 2 ท่าน</li>
+                            <li><i class="fas fa-wifi"></i> WiFi ฟรี</li>
+                            <li><i class="fas fa-snowflake"></i> เครื่องปรับอากาศ</li>
+                        </ul>
+                        <div class="room-price">
+                            <span class="price">฿1,200</span>
+                            <span class="per-night">/ คืน</span>
+                        </div>
+                        <a href="room-detail.html" class="btn btn-primary">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ห้องดีลักซ์">
+                    </div>
+                    <div class="room-content">
+                        <h3>ห้องดีลักซ์</h3>
+                        <p>ห้องพักกว้างขวาง พร้อมวิวทะเลสวยงาม และระเบียงส่วนตัว</p>
+                        <ul>
+                            <li><i class="fas fa-bed"></i> เตียงคู่ 1 เตียง + โซฟา</li>
+                            <li><i class="fas fa-users"></i> 3 ท่าน</li>
+                            <li><i class="fas fa-wifi"></i> WiFi ฟรี</li>
+                            <li><i class="fas fa-snowflake"></i> เครื่องปรับอากาศ</li>
+                            <li><i class="fas fa-umbrella-beach"></i> วิวทะเล</li>
+                        </ul>
+                        <div class="room-price">
+                            <span class="price">฿1,800</span>
+                            <span class="per-night">/ คืน</span>
+                        </div>
+                        <a href="room-detail.html" class="btn btn-primary">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ห้องแฟมิลี่">
+                    </div>
+                    <div class="room-content">
+                        <h3>ห้องแฟมิลี่</h3>
+                        <p>ห้องพักสำหรับครอบครัว พร้อมเตียงแยก และพื้นที่กว้างขวาง</p>
+                        <ul>
+                            <li><i class="fas fa-bed"></i> เตียงคู่ 1 เตียง + เตียงเดี่ยว 2 เตียง</li>
+                            <li><i class="fas fa-users"></i> 4 ท่าน</li>
+                            <li><i class="fas fa-wifi"></i> WiFi ฟรี</li>
+                            <li><i class="fas fa-snowflake"></i> เครื่องปรับอากาศ</li>
+                            <li><i class="fas fa-bath"></i> ห้องน้ำ 2 ห้อง</li>
+                        </ul>
+                        <div class="room-price">
+                            <span class="price">฿2,500</span>
+                            <span class="per-night">/ คืน</span>
+                        </div>
+                        <a href="room-detail.html" class="btn btn-primary">ดูรายละเอียด</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <h2>แพ็คเกจพิเศษ</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>แพ็คเกจพักผ่อน</h3>
+                        <div class="package-price">
+                            <span class="price">฿3,500</span>
+                            <span class="duration">/ 2 คืน</span>
+                        </div>
+                    </div>
+                    <div class="package-content">
+                        <ul>
+                            <li><i class="fas fa-check"></i> ห้องพัก 2 คืน</li>
+                            <li><i class="fas fa-check"></i> อาหารเช้า 2 มื้อ</li>
+                            <li><i class="fas fa-check"></i> กิจกรรมดำน้ำดูปะการัง</li>
+                            <li><i class="fas fa-check"></i> รถรับส่งสนามบิน</li>
+                        </ul>
+                        <a href="package-detail.html" class="btn btn-primary">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <div class="package-card featured">
+                    <div class="package-badge">แนะนำ</div>
+                    <div class="package-header">
+                        <h3>แพ็คเกจโรแมนติก</h3>
+                        <div class="package-price">
+                            <span class="price">฿5,500</span>
+                            <span class="duration">/ 2 คืน</span>
+                        </div>
+                    </div>
+                    <div class="package-content">
+                        <ul>
+                            <li><i class="fas fa-check"></i> ห้องดีลักซ์ 2 คืน</li>
+                            <li><i class="fas fa-check"></i> อาหารเช้า 2 มื้อ</li>
+                            <li><i class="fas fa-check"></i> อาหารเย็นโรแมนติก 1 มื้อ</li>
+                            <li><i class="fas fa-check"></i> กิจกรรมชมพระอาทิตย์ตก</li>
+                            <li><i class="fas fa-check"></i> ดอกไม้และช็อกโกแลต</li>
+                        </ul>
+                        <a href="package-detail.html" class="btn btn-primary">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>แพ็คเกจครอบครัว</h3>
+                        <div class="package-price">
+                            <span class="price">฿7,500</span>
+                            <span class="duration">/ 3 คืน</span>
+                        </div>
+                    </div>
+                    <div class="package-content">
+                        <ul>
+                            <li><i class="fas fa-check"></i> ห้องแฟมิลี่ 3 คืน</li>
+                            <li><i class="fas fa-check"></i> อาหารเช้า 3 มื้อ</li>
+                            <li><i class="fas fa-check"></i> กิจกรรมปิกนิกที่ชายหาด</li>
+                            <li><i class="fas fa-check"></i> กิจกรรมทำอาหารไทย</li>
+                            <li><i class="fas fa-check"></i> รถรับส่งฟรี</li>
+                        </ul>
+                        <a href="package-detail.html" class="btn btn-primary">ดูรายละเอียด</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>ติดต่อสอบถาม</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>ข้อมูลติดต่อ</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>ที่อยู่</h4>
+                            <p>123 ถนนชายหาด ตำบลเกาะช้าง อำเภอเกาะช้าง จังหวัดตราด 23170</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>โทรศัพท์</h4>
+                            <p>039-123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>อีเมล</h4>
+                            <p>info@homestaybeachkochang.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>เวลาทำการ</h4>
+                            <p>ทุกวัน 24 ชั่วโมง</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>ส่งข้อความถึงเรา</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="ชื่อ-นามสกุล" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="อีเมล" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="เบอร์โทรศัพท์" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" name="subject" required>
+                                <option value="">เลือกหัวข้อ</option>
+                                <option value="booking">จองห้องพัก</option>
+                                <option value="package">สอบถามแพ็คเกจ</option>
+                                <option value="general">สอบถามทั่วไป</option>
+                                <option value="complaint">ร้องเรียน</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="ข้อความ" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">ส่งข้อความ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-umbrella-beach"></i> โฮมสเตย์บีชเกาะช้าง</h3>
+                    <p>ประสบการณ์การพักผ่อนที่อบอุ่น ใกล้ชิดธรรมชาติ และวิวทะเลที่สวยงาม</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-line"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>ลิงก์ด่วน</h4>
+                    <ul>
+                        <li><a href="#home">หน้าแรก</a></li>
+                        <li><a href="#rooms">ห้องพัก</a></li>
+                        <li><a href="#packages">แพ็คเกจ</a></li>
+                        <li><a href="#contact">ติดต่อสอบถาม</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>บริการของเรา</h4>
+                    <ul>
+                        <li>ห้องพักสะอาด</li>
+                        <li>อาหารเช้า</li>
+                        <li>WiFi ฟรี</li>
+                        <li>ที่จอดรถฟรี</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 โฮมสเตย์บีชเกาะช้าง. สงวนลิขสิทธิ์.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

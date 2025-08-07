@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดแพ็คเกจ - โฮมสเตย์บีชเกาะช้าง</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="detail-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><i class="fas fa-umbrella-beach"></i> โฮมสเตย์บีชเกาะช้าง</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">หน้าแรก</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#rooms" class="nav-link">ห้องพัก</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#packages" class="nav-link">แพ็คเกจ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">ติดต่อสอบถาม</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Package Detail Section -->
+    <section class="package-detail">
+        <div class="container">
+            <div class="package-detail-content">
+                <div class="package-images">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="แพ็คเกจโรแมนติก" id="mainImage">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="แพ็คเกจโรแมนติก" class="thumbnail active" onclick="changeImage(this, 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="แพ็คเกจโรแมนติก" class="thumbnail" onclick="changeImage(this, 'https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="แพ็คเกจโรแมนติก" class="thumbnail" onclick="changeImage(this, 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="แพ็คเกจโรแมนติก" class="thumbnail" onclick="changeImage(this, 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                    </div>
+                </div>
+                
+                <div class="package-info">
+                    <div class="package-header">
+                        <div class="package-badge">แนะนำ</div>
+                        <h1>แพ็คเกจโรแมนติก</h1>
+                        <div class="package-price">
+                            <span class="price">฿5,500</span>
+                            <span class="duration">/ 2 คืน</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-description">
+                        <p>แพ็คเกจพิเศษสำหรับคู่รัก เน้นความโรแมนติกและความพิเศษ มาสร้างความทรงจำที่สวยงามกับคนที่คุณรัก</p>
+                    </div>
+                    
+                    <div class="package-includes">
+                        <h3>แพ็คเกจนี้รวม</h3>
+                        <div class="includes-grid">
+                            <div class="include-item">
+                                <i class="fas fa-bed"></i>
+                                <span>ห้องดีลักซ์ 2 คืน</span>
+                            </div>
+                            <div class="include-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>อาหารเช้า 2 มื้อ</span>
+                            </div>
+                            <div class="include-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>อาหารเย็นโรแมนติก 1 มื้อ</span>
+                            </div>
+                            <div class="include-item">
+                                <i class="fas fa-sun"></i>
+                                <span>กิจกรรมชมพระอาทิตย์ตก</span>
+                            </div>
+                            <div class="include-item">
+                                <i class="fas fa-flower"></i>
+                                <span>ดอกไม้และช็อกโกแลต</span>
+                            </div>
+                            <div class="include-item">
+                                <i class="fas fa-car"></i>
+                                <span>รถรับส่งสนามบิน</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-schedule">
+                        <h3>ตารางกิจกรรม</h3>
+                        <div class="schedule-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-day">วันที่ 1</div>
+                                <div class="timeline-content">
+                                    <h4>วันแรก - ต้อนรับ</h4>
+                                    <ul>
+                                        <li>14:00 - เช็คอิน</li>
+                                        <li>15:00 - อาหารว่างต้อนรับ</li>
+                                        <li>18:00 - อาหารเย็นโรแมนติก</li>
+                                        <li>19:30 - ชมพระอาทิตย์ตก</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-day">วันที่ 2</div>
+                                <div class="timeline-content">
+                                    <h4>วันที่สอง - ผจญภัย</h4>
+                                    <ul>
+                                        <li>07:00 - อาหารเช้า</li>
+                                        <li>09:00 - กิจกรรมดำน้ำดูปะการัง</li>
+                                        <li>12:00 - อาหารกลางวัน</li>
+                                        <li>15:00 - พักผ่อนอิสระ</li>
+                                        <li>18:00 - อาหารเย็น</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-day">วันที่ 3</div>
+                                <div class="timeline-content">
+                                    <h4>วันสุดท้าย - ลาก่อน</h4>
+                                    <ul>
+                                        <li>07:00 - อาหารเช้า</li>
+                                        <li>09:00 - พักผ่อนอิสระ</li>
+                                        <li>11:00 - เช็คเอาท์</li>
+                                        <li>12:00 - ส่งสนามบิน</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-section">
+                        <h3>จองแพ็คเกจ</h3>
+                        <form class="booking-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="checkin">วันที่เช็คอิน</label>
+                                    <input type="date" id="checkin" name="checkin" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="guests">จำนวนผู้เข้าพัก</label>
+                                    <select id="guests" name="guests" required>
+                                        <option value="">เลือกจำนวน</option>
+                                        <option value="2">2 ท่าน</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="special-requests">คำขอพิเศษ</label>
+                                    <textarea id="special-requests" name="special-requests" rows="3" placeholder="เช่น อาหารเจ, อาหารมังสวิรัติ, ฯลฯ"></textarea>
+                                </div>
+                            </div>
+                            <div class="total-price">
+                                <span>ราคารวม: </span>
+                                <span class="total-amount">฿5,500</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary">จองแพ็คเกจ</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="package-gallery">
+                <h3>ภาพกิจกรรมเพิ่มเติม</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="กิจกรรม">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="กิจกรรม">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="กิจกรรม">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="กิจกรรม">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-umbrella-beach"></i> โฮมสเตย์บีชเกาะช้าง</h3>
+                    <p>ประสบการณ์การพักผ่อนที่อบอุ่น ใกล้ชิดธรรมชาติ และวิวทะเลที่สวยงาม</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-line"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>ลิงก์ด่วน</h4>
+                    <ul>
+                        <li><a href="index.html">หน้าแรก</a></li>
+                        <li><a href="index.html#rooms">ห้องพัก</a></li>
+                        <li><a href="index.html#packages">แพ็คเกจ</a></li>
+                        <li><a href="index.html#contact">ติดต่อสอบถาม</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>บริการของเรา</h4>
+                    <ul>
+                        <li>ห้องพักสะอาด</li>
+                        <li>อาหารเช้า</li>
+                        <li>WiFi ฟรี</li>
+                        <li>ที่จอดรถฟรี</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 โฮมสเตย์บีชเกาะช้าง. สงวนลิขสิทธิ์.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    <script src="detail-script.js"></script>
+</body>
+</html> 

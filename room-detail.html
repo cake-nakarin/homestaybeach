@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดห้องพัก - โฮมสเตย์บีชเกาะช้าง</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="detail-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><i class="fas fa-umbrella-beach"></i> โฮมสเตย์บีชเกาะช้าง</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">หน้าแรก</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#rooms" class="nav-link">ห้องพัก</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#packages" class="nav-link">แพ็คเกจ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">ติดต่อสอบถาม</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Room Detail Section -->
+    <section class="room-detail">
+        <div class="container">
+            <div class="room-detail-content">
+                <div class="room-images">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ห้องสแตนดาร์ด" id="mainImage">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ห้องสแตนดาร์ด" class="thumbnail active" onclick="changeImage(this, 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ห้องสแตนดาร์ด" class="thumbnail" onclick="changeImage(this, 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ห้องสแตนดาร์ด" class="thumbnail" onclick="changeImage(this, 'https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ห้องสแตนดาร์ด" class="thumbnail" onclick="changeImage(this, 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                    </div>
+                </div>
+                
+                <div class="room-info">
+                    <div class="room-header">
+                        <h1>ห้องสแตนดาร์ด</h1>
+                        <div class="room-price">
+                            <span class="price">฿1,200</span>
+                            <span class="per-night">/ คืน</span>
+                        </div>
+                    </div>
+                    
+                    <div class="room-description">
+                        <p>ห้องพักสะอาด สะดวกสบาย พร้อมเครื่องปรับอากาศ และห้องน้ำในตัว เหมาะสำหรับคู่รักหรือเพื่อน 2 ท่าน</p>
+                    </div>
+                    
+                    <div class="room-features">
+                        <h3>สิ่งอำนวยความสะดวก</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fas fa-bed"></i>
+                                <span>เตียงคู่ 1 เตียง</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-users"></i>
+                                <span>รองรับ 2 ท่าน</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-wifi"></i>
+                                <span>WiFi ฟรี</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-snowflake"></i>
+                                <span>เครื่องปรับอากาศ</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-bath"></i>
+                                <span>ห้องน้ำในตัว</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-tv"></i>
+                                <span>ทีวี</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-coffee"></i>
+                                <span>กาแฟ/ชา</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-shower"></i>
+                                <span>เครื่องทำน้ำอุ่น</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="room-amenities">
+                        <h3>สิ่งอำนวยความสะดวกเพิ่มเติม</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> ผ้าเช็ดตัว</li>
+                            <li><i class="fas fa-check"></i> สบู่ แชมพู</li>
+                            <li><i class="fas fa-check"></i> ฟรีดราย</li>
+                            <li><i class="fas fa-check"></i> ตู้เย็น</li>
+                            <li><i class="fas fa-check"></i> กระเป๋าเดินทาง</li>
+                            <li><i class="fas fa-check"></i> ที่จอดรถฟรี</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="booking-section">
+                        <h3>จองห้องพัก</h3>
+                        <form class="booking-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="checkin">วันที่เช็คอิน</label>
+                                    <input type="date" id="checkin" name="checkin" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkout">วันที่เช็คเอาท์</label>
+                                    <input type="date" id="checkout" name="checkout" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="guests">จำนวนผู้เข้าพัก</label>
+                                    <select id="guests" name="guests" required>
+                                        <option value="">เลือกจำนวน</option>
+                                        <option value="1">1 ท่าน</option>
+                                        <option value="2">2 ท่าน</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nights">จำนวนคืน</label>
+                                    <input type="number" id="nights" name="nights" min="1" max="30" value="1" required>
+                                </div>
+                            </div>
+                            <div class="total-price">
+                                <span>ราคารวม: </span>
+                                <span class="total-amount">฿1,200</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary">จองเลย</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="room-gallery">
+                <h3>ภาพห้องพักเพิ่มเติม</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ห้องพัก">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ห้องพัก">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ห้องพัก">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ห้องพัก">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-umbrella-beach"></i> โฮมสเตย์บีชเกาะช้าง</h3>
+                    <p>ประสบการณ์การพักผ่อนที่อบอุ่น ใกล้ชิดธรรมชาติ และวิวทะเลที่สวยงาม</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-line"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>ลิงก์ด่วน</h4>
+                    <ul>
+                        <li><a href="index.html">หน้าแรก</a></li>
+                        <li><a href="index.html#rooms">ห้องพัก</a></li>
+                        <li><a href="index.html#packages">แพ็คเกจ</a></li>
+                        <li><a href="index.html#contact">ติดต่อสอบถาม</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>บริการของเรา</h4>
+                    <ul>
+                        <li>ห้องพักสะอาด</li>
+                        <li>อาหารเช้า</li>
+                        <li>WiFi ฟรี</li>
+                        <li>ที่จอดรถฟรี</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 โฮมสเตย์บีชเกาะช้าง. สงวนลิขสิทธิ์.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    <script src="detail-script.js"></script>
+</body>
+</html> 
