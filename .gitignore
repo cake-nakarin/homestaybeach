@@ -49,4 +49,23 @@ dist/
 build/
 
 # EmailJS keys (for security)
-emailjs-keys.txt 
+emailjs-keys.txt
+security-config.js
+.env
+.env.local
+.env.production
+.env.development
+
+# Security files
+*.key
+*.pem
+*.crt
+*.p12
+secrets.json
+config.json
+
+# Logs (อาจมีข้อมูลสำคัญ)
+*.log
+logs/
+error.log
+access.log 
