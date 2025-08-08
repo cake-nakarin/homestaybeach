@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section Design Options - โฮมสเตย์บีชเกาะช้าง</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .design-demo {
+            margin: 50px 0;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .design-title {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .demo-intro {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 10px;
+        }
+        .demo-intro h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .demo-intro p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="demo-intro">
+            <h1>การออกแบบ Hero Section หลายแบบ</h1>
+            <p>เลือกการออกแบบที่คุณชอบที่สุดสำหรับเว็บไซต์โฮมสเตย์บีชเกาะช้าง</p>
+        </div>
+
+        <!-- Design Option 1: Full Screen Video Background -->
+        <div class="design-demo">
+            <div class="design-title">แบบที่ 1: Full Screen Video Background</div>
+            <section class="hero hero-video">
+                <video autoplay muted loop class="hero-video-bg">
+                    <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">ยินดีต้อนรับสู่โฮมสเตย์บีชเกาะช้าง</h1>
+                    <p class="hero-subtitle">ประสบการณ์การพักผ่อนที่อบอุ่น ใกล้ชิดธรรมชาติ และวิวทะเลที่สวยงาม</p>
+                    <div class="hero-buttons">
+                        <a href="#rooms" class="btn btn-primary">จองห้องพัก</a>
+                        <a href="#packages" class="btn btn-secondary">ดูแพ็คเกจ</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Design Option 2: Split Layout -->
+        <div class="design-demo">
+            <div class="design-title">แบบที่ 2: Split Layout (ซ้าย-ขวา)</div>
+            <section class="hero hero-split">
+                <div class="hero-text">
+                    <div class="hero-content">
+                        <h1>ยินดีต้อนรับสู่โฮมสเตย์บีชเกาะช้าง</h1>
+                        <p>ประสบการณ์การพักผ่อนที่อบอุ่น ใกล้ชิดธรรมชาติ และวิวทะเลที่สวยงาม</p>
+                        <div class="hero-buttons">
+                            <a href="#rooms" class="btn btn-primary">จองห้องพัก</a>
+                            <a href="#packages" class="btn btn-secondary">ดูแพ็คเกจ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="โฮมสเตย์บีชเกาะช้าง">
+                </div>
+            </section>
+        </div>
+
+        <!-- Design Option 3: Minimal with Parallax -->
+        <div class="design-demo">
+            <div class="design-title">แบบที่ 3: Minimal with Parallax</div>
+            <section class="hero hero-minimal">
+                <div class="hero-bg-parallax"></div>
+                <div class="hero-content">
+                    <h1>ยินดีต้อนรับสู่โฮมสเตย์บีชเกาะช้าง</h1>
+                    <p>ประสบการณ์การพักผ่อนที่อบอุ่น ใกล้ชิดธรรมชาติ และวิวทะเลที่สวยงาม</p>
+                    <div class="hero-buttons">
+                        <a href="#rooms" class="btn btn-primary">จองห้องพัก</a>
+                        <a href="#packages" class="btn btn-secondary">ดูแพ็คเกจ</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Design Option 4: Card Style -->
+        <div class="design-demo">
+            <div class="design-title">แบบที่ 4: Card Style</div>
+            <section class="hero hero-card">
+                <div class="hero-card-container">
+                    <div class="hero-card-inner">
+                        <div class="hero-card-image">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="โฮมสเตย์บีชเกาะช้าง">
+                        </div>
+                        <div class="hero-card-content">
+                            <h1>ยินดีต้อนรับสู่โฮมสเตย์บีชเกาะช้าง</h1>
+                            <p>ประสบการณ์การพักผ่อนที่อบอุ่น ใกล้ชิดธรรมชาติ และวิวทะเลที่สวยงาม</p>
+                            <div class="hero-buttons">
+                                <a href="#rooms" class="btn btn-primary">จองห้องพัก</a>
+                                <a href="#packages" class="btn btn-secondary">ดูแพ็คเกจ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Design Option 5: Original with Image Slider -->
+        <div class="design-demo">
+            <div class="design-title">แบบที่ 5: Original with Image Slider</div>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>ยินดีต้อนรับสู่โฮมสเตย์บีชเกาะช้าง</h1>
+                    <p>ประสบการณ์การพักผ่อนที่อบอุ่น ใกล้ชิดธรรมชาติ และวิวทะเลที่สวยงาม</p>
+                    <div class="hero-buttons">
+                        <a href="#rooms" class="btn btn-primary">จองห้องพัก</a>
+                        <a href="#packages" class="btn btn-secondary">ดูแพ็คเกจ</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-slider">
+                        <div class="slide active">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="โฮมสเตย์บีชเกาะช้าง">
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="ห้องพักสวยงาม">
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="วิวทะเลสวยงาม">
+                        </div>
+                    </div>
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="demo-intro">
+            <h2>วิธีการเปลี่ยนการออกแบบ</h2>
+            <p>1. เปิดไฟล์ index.html</p>
+            <p>2. คอมเมนต์ส่วนที่คุณไม่ต้องการ</p>
+            <p>3. เอา comment ออกจากส่วนที่คุณต้องการ</p>
+            <p>4. เปลี่ยน class name ให้ตรงกับการออกแบบที่เลือก</p>
+        </div>
+    </div>
+
+    <script>
+        // Image slider functionality
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function currentSlide(n) {
+            currentSlideIndex = n - 1;
+            showSlide(currentSlideIndex);
+        }
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html> 

@@ -1,16 +1,16 @@
-/* Detail Page Styles - Beach Theme Colors */
-/* Yellow (Sand), Blue (Ocean), Green (Nature) */
+/* Detail Page Styles - Yellow & Orange Main */
+/* Yellow & Orange Beach Theme */
 
 :root {
-    --sand-yellow: #f4d03f;
-    --light-sand: #f7dc6f;
-    --dark-sand: #d4ac0d;
-    --ocean-blue: #3498db;
-    --light-ocean: #5dade2;
-    --dark-ocean: #2980b9;
-    --nature-green: #27ae60;
-    --light-green: #58d68d;
-    --dark-green: #229954;
+    --main-yellow: #ffd700;
+    --light-yellow: #fff4b3;
+    --dark-yellow: #ffb300;
+    --main-orange: #ff8c00;
+    --light-orange: #ffb366;
+    --dark-orange: #e67300;
+    --accent-blue: #3498db;
+    --light-blue: #5dade2;
+    --dark-blue: #2980b9;
     --white: #ffffff;
     --light-gray: #f8f9fa;
     --dark-gray: #2c3e50;
@@ -21,7 +21,7 @@
 .room-detail,
 .package-detail {
     padding: 120px 0 80px;
-    background: linear-gradient(135deg, var(--light-sand) 0%, var(--light-ocean) 50%, var(--light-green) 100%);
+    background: linear-gradient(135deg, var(--light-yellow) 0%, var(--light-orange) 50%, var(--main-orange) 100%);
     min-height: 100vh;
 }
 
@@ -82,8 +82,8 @@
 }
 
 .thumbnail.active {
-    border-color: var(--ocean-blue);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    border-color: var(--main-orange);
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
 }
 
 /* Info Section */
@@ -105,7 +105,7 @@
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, var(--sand-yellow), var(--ocean-blue), var(--nature-green));
+    background: linear-gradient(90deg, var(--main-yellow), var(--main-orange), var(--dark-orange));
 }
 
 /* Header */

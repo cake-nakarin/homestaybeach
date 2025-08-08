@@ -12,17 +12,17 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Beach Theme Colors - Yellow (Sand), Blue (Ocean), Green (Nature) */
+/* Beach Theme Colors - Yellow & Orange Main */
 :root {
-    --sand-yellow: #f4d03f;
-    --light-sand: #f7dc6f;
-    --dark-sand: #d4ac0d;
-    --ocean-blue: #3498db;
-    --light-ocean: #5dade2;
-    --dark-ocean: #2980b9;
-    --nature-green: #27ae60;
-    --light-green: #58d68d;
-    --dark-green: #229954;
+    --main-yellow: #ffd700;
+    --light-yellow: #fff4b3;
+    --dark-yellow: #ffb300;
+    --main-orange: #ff8c00;
+    --light-orange: #ffb366;
+    --dark-orange: #e67300;
+    --accent-blue: #3498db;
+    --light-blue: #5dade2;
+    --dark-blue: #2980b9;
     --white: #ffffff;
     --light-gray: #f8f9fa;
     --dark-gray: #2c3e50;
@@ -64,7 +64,7 @@ body {
 }
 
 .nav-logo i {
-    color: var(--ocean-blue);
+    color: var(--main-orange);
     margin-right: 8px;
 }
 
@@ -83,7 +83,7 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--ocean-blue);
+    color: var(--main-orange);
 }
 
 .nav-link::after {
@@ -93,7 +93,7 @@ body {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: var(--ocean-blue);
+    background-color: var(--main-orange);
     transition: width 0.3s ease;
 }
 
@@ -115,57 +115,319 @@ body {
     transition: 0.3s;
 }
 
-/* Hero Section */
+/* Hero Section Styles - Multiple Design Options */
+
+/* Design Option 1: Full Screen Video Background */
+.hero-video {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Video fallback for browsers that don't support video */
+.video-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.hero-video .hero-content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-video .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-video .hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Design Option 2: Split Layout */
+.hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.hero-split .hero-text {
+    padding: 4rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.hero-split .hero-image {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-split .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Design Option 3: Minimal with Parallax */
+.hero-minimal {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.hero-bg-parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.3;
+}
+
+.hero-minimal .hero-content {
+    text-align: center;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-minimal h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hero-minimal p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+/* Design Option 4: Card Style */
+.hero-card {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem;
+}
+
+.hero-card-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-card-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-card-image {
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-card-content {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-card-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hero-card-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Alternative: Animated Background (if video doesn't work) */
+.hero-animated {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: wave 6s ease-in-out infinite;
+}
+
+.wave1 {
+    animation-delay: 0s;
+    opacity: 0.3;
+}
+
+.wave2 {
+    animation-delay: 2s;
+    opacity: 0.2;
+}
+
+.wave3 {
+    animation-delay: 4s;
+    opacity: 0.1;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-20px);
+    }
+}
+
+.hero-animated .hero-content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-animated .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-animated .hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Original Hero Styles (keep for reference) */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--sand-yellow) 0%, var(--ocean-blue) 50%, var(--nature-green) 100%);
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     position: relative;
     overflow: hidden;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
-}
-
 .hero-content {
-    flex: 1;
-    padding: 0 50px;
-    color: white;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
     z-index: 2;
-    position: relative;
 }
 
-.hero-content h1 {
+.hero h1 {
     font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    line-height: 1.2;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 0.2s both;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 20px;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease-out 0.4s both;
 }
 
 .hero-image {
-    flex: 1;
-    position: relative;
-    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .image-slider {
@@ -181,7 +443,7 @@ body {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 .slide.active {
@@ -201,6 +463,7 @@ body {
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
+    z-index: 3;
 }
 
 .dot {
@@ -230,15 +493,15 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--ocean-blue), var(--dark-ocean));
+    background: linear-gradient(135deg, var(--main-orange), var(--dark-orange));
     color: white;
-    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
-    background: linear-gradient(135deg, var(--dark-ocean), var(--ocean-blue));
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+    background: linear-gradient(135deg, var(--dark-orange), var(--main-orange));
 }
 
 .btn-secondary {
@@ -298,7 +561,7 @@ body {
 
 .feature i {
     font-size: 3rem;
-    color: var(--ocean-blue);
+    color: var(--main-orange);
     margin-bottom: 20px;
 }
 
@@ -389,7 +652,7 @@ body {
 }
 
 .room-content li i {
-    color: var(--ocean-blue);
+    color: var(--main-orange);
     margin-right: 10px;
     width: 20px;
 }
@@ -403,7 +666,7 @@ body {
 .price {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--ocean-blue);
+    color: var(--main-orange);
 }
 
 .per-night {
@@ -446,7 +709,7 @@ body {
 }
 
 .package-card.featured {
-    border-color: var(--ocean-blue);
+    border-color: var(--main-orange);
     transform: scale(1.05);
 }
 
@@ -454,7 +717,7 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: linear-gradient(135deg, var(--sand-yellow), var(--ocean-blue));
+    background: linear-gradient(135deg, var(--main-yellow), var(--main-orange));
     color: white;
     padding: 8px 15px;
     border-radius: 20px;
@@ -463,7 +726,7 @@ body {
 }
 
 .package-header {
-    background: linear-gradient(135deg, var(--ocean-blue), var(--dark-ocean));
+    background: linear-gradient(135deg, var(--main-orange), var(--dark-orange));
     color: white;
     padding: 30px;
     text-align: center;
@@ -508,7 +771,7 @@ body {
 }
 
 .package-content li i {
-    color: var(--nature-green);
+    color: var(--main-yellow);
     margin-right: 10px;
     width: 20px;
 }
@@ -547,7 +810,7 @@ body {
 
 .contact-item i {
     font-size: 1.5rem;
-    color: var(--ocean-blue);
+    color: var(--main-orange);
     margin-right: 15px;
     margin-top: 5px;
     width: 25px;
@@ -582,7 +845,7 @@ body {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--ocean-blue);
+    border-color: var(--main-orange);
 }
 
 .form-group textarea {
@@ -607,7 +870,7 @@ body {
 .footer-section h3,
 .footer-section h4 {
     margin-bottom: 20px;
-    color: var(--ocean-blue);
+    color: var(--main-orange);
 }
 
 .footer-section p {
@@ -631,7 +894,7 @@ body {
 }
 
 .footer-section ul li a:hover {
-    color: var(--ocean-blue);
+    color: var(--main-orange);
 }
 
 .social-links {
@@ -643,7 +906,7 @@ body {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background: var(--ocean-blue);
+    background: var(--main-orange);
     color: white;
     text-align: center;
     line-height: 40px;
@@ -652,7 +915,7 @@ body {
 }
 
 .social-links a:hover {
-    background: var(--dark-ocean);
+    background: var(--dark-orange);
     transform: translateY(-2px);
 }
 
@@ -663,7 +926,7 @@ body {
     color: #bdc3c7;
 }
 
-/* Responsive Design */
+/* Responsive Design for all options */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -686,19 +949,40 @@ body {
         left: 0;
     }
 
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 100px 20px 50px;
+    .hero-split {
+        grid-template-columns: 1fr;
     }
-
-    .hero-content {
-        padding: 0;
-        margin-bottom: 30px;
+    
+    .hero-split .hero-text {
+        padding: 2rem;
     }
-
-    .hero-content h1 {
+    
+    .hero-split .hero-image {
+        height: 50vh;
+    }
+    
+    .hero-card-inner {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-card-image {
+        height: 300px;
+    }
+    
+    .hero-card-content {
+        padding: 2rem;
+    }
+    
+    .hero-video .hero-title,
+    .hero-minimal h1,
+    .hero-animated .hero-title {
         font-size: 2.5rem;
+    }
+    
+    .hero-video .hero-subtitle,
+    .hero-minimal p,
+    .hero-animated .hero-subtitle {
+        font-size: 1.1rem;
     }
 
     .hero-buttons {
@@ -780,10 +1064,193 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(var(--sand-yellow), var(--ocean-blue));
+    background: linear-gradient(var(--main-yellow), var(--main-orange));
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(var(--ocean-blue), var(--nature-green));
+    background: linear-gradient(var(--main-orange), var(--dark-orange));
+} 
+
+/* Original Hero Styles (keep for reference) */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.image-slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dot.active {
+    background: white;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+
+/* Alternative: Animated Background (if video doesn't work) */
+.hero-animated {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: wave 6s ease-in-out infinite;
+}
+
+.wave1 {
+    animation-delay: 0s;
+    opacity: 0.3;
+}
+
+.wave2 {
+    animation-delay: 2s;
+    opacity: 0.2;
+}
+
+.wave3 {
+    animation-delay: 4s;
+    opacity: 0.1;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-20px);
+    }
+}
+
+.hero-animated .hero-content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-animated .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-animated .hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 } 

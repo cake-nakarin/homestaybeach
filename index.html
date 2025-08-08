@@ -37,7 +37,101 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Design Option 1: Full Screen Video Background (CURRENT) -->
+    <section id="home" class="hero hero-video">
+        <video autoplay muted loop playsinline class="hero-video-bg">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+            <!-- Fallback for browsers that don't support video -->
+            <div class="video-fallback"></div>
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">ยินดีต้อนรับสู่โฮมสเตย์บีชเกาะช้าง</h1>
+            <p class="hero-subtitle">ประสบการณ์การพักผ่อนที่อบอุ่น ใกล้ชิดธรรมชาติ และวิวทะเลที่สวยงาม</p>
+            <div class="hero-buttons">
+                <a href="#rooms" class="btn btn-primary">จองห้องพัก</a>
+                <a href="#packages" class="btn btn-secondary">ดูแพ็คเกจ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section - Alternative: Animated Background (if video doesn't work) -->
+    <!--
+    <section id="home" class="hero hero-animated">
+        <div class="animated-bg">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">ยินดีต้อนรับสู่โฮมสเตย์บีชเกาะช้าง</h1>
+            <p class="hero-subtitle">ประสบการณ์การพักผ่อนที่อบอุ่น ใกล้ชิดธรรมชาติ และวิวทะเลที่สวยงาม</p>
+            <div class="hero-buttons">
+                <a href="#rooms" class="btn btn-primary">จองห้องพัก</a>
+                <a href="#packages" class="btn btn-secondary">ดูแพ็คเกจ</a>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Hero Section - Design Option 2: Split Layout -->
+    <!--
+    <section id="home" class="hero hero-split">
+        <div class="hero-text">
+            <div class="hero-content">
+                <h1>ยินดีต้อนรับสู่โฮมสเตย์บีชเกาะช้าง</h1>
+                <p>ประสบการณ์การพักผ่อนที่อบอุ่น ใกล้ชิดธรรมชาติ และวิวทะเลที่สวยงาม</p>
+                <div class="hero-buttons">
+                    <a href="#rooms" class="btn btn-primary">จองห้องพัก</a>
+                    <a href="#packages" class="btn btn-secondary">ดูแพ็คเกจ</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="โฮมสเตย์บีชเกาะช้าง">
+        </div>
+    </section>
+    -->
+
+    <!-- Hero Section - Design Option 3: Minimal with Parallax -->
+    <!--
+    <section id="home" class="hero hero-minimal">
+        <div class="hero-bg-parallax"></div>
+        <div class="hero-content">
+            <h1>ยินดีต้อนรับสู่โฮมสเตย์บีชเกาะช้าง</h1>
+            <p>ประสบการณ์การพักผ่อนที่อบอุ่น ใกล้ชิดธรรมชาติ และวิวทะเลที่สวยงาม</p>
+            <div class="hero-buttons">
+                <a href="#rooms" class="btn btn-primary">จองห้องพัก</a>
+                <a href="#packages" class="btn btn-secondary">ดูแพ็คเกจ</a>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Hero Section - Design Option 4: Card Style -->
+    <!--
+    <section id="home" class="hero hero-card">
+        <div class="hero-card-container">
+            <div class="hero-card-inner">
+                <div class="hero-card-image">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="โฮมสเตย์บีชเกาะช้าง">
+                </div>
+                <div class="hero-card-content">
+                    <h1>ยินดีต้อนรับสู่โฮมสเตย์บีชเกาะช้าง</h1>
+                    <p>ประสบการณ์การพักผ่อนที่อบอุ่น ใกล้ชิดธรรมชาติ และวิวทะเลที่สวยงาม</p>
+                    <div class="hero-buttons">
+                        <a href="#rooms" class="btn btn-primary">จองห้องพัก</a>
+                        <a href="#packages" class="btn btn-secondary">ดูแพ็คเกจ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Hero Section - Design Option 5: Original with Image Slider -->
+    <!--
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>ยินดีต้อนรับสู่โฮมสเตย์บีชเกาะช้าง</h1>
@@ -66,6 +160,7 @@
             </div>
         </div>
     </section>
+    -->
 
     <!-- About Section -->
     <section class="about">
