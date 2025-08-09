@@ -26,6 +26,9 @@
                     <a href="#packages" class="nav-link">แพ็คเกจ</a>
                 </li>
                 <li class="nav-item">
+                    <a href="#gallery" class="nav-link">แกลเลอรี่</a>
+                </li>
+                <li class="nav-item">
                     <a href="#contact" class="nav-link">ติดต่อสอบถาม</a>
                 </li>
             </ul>
@@ -37,24 +40,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section - Design Option 1: Full Screen Video Background (CURRENT) -->
-    <section id="home" class="hero hero-video">
-        <video autoplay muted loop playsinline class="hero-video-bg">
-            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
-            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
-            <!-- Fallback for browsers that don't support video -->
-            <div class="video-fallback"></div>
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">ยินดีต้อนรับสู่โฮมสเตย์บีชเกาะช้าง</h1>
-            <p class="hero-subtitle">ประสบการณ์การพักผ่อนที่อบอุ่น ใกล้ชิดธรรมชาติ และวิวทะเลที่สวยงาม</p>
-            <div class="hero-buttons">
-                <a href="#rooms" class="btn btn-primary">จองห้องพัก</a>
-                <a href="#packages" class="btn btn-secondary">ดูแพ็คเกจ</a>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Hero Section - Alternative: Animated Background (if video doesn't work) -->
     <!--
@@ -95,8 +81,8 @@
     -->
 
     <!-- Hero Section - Design Option 3: Minimal with Parallax -->
-    <!--
-    <section id="home" class="hero hero-minimal">
+    
+    <!--section id="home" class="hero hero-minimal">
         <div class="hero-bg-parallax"></div>
         <div class="hero-content">
             <h1>ยินดีต้อนรับสู่โฮมสเตย์บีชเกาะช้าง</h1>
@@ -106,8 +92,7 @@
                 <a href="#packages" class="btn btn-secondary">ดูแพ็คเกจ</a>
             </div>
         </div>
-    </section>
-    -->
+    </section-->
 
     <!-- Hero Section - Design Option 4: Card Style -->
     <!--
@@ -131,7 +116,7 @@
     -->
 
     <!-- Hero Section - Design Option 5: Original with Image Slider -->
-    <!--
+    
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>ยินดีต้อนรับสู่โฮมสเตย์บีชเกาะช้าง</h1>
@@ -154,13 +139,13 @@
                 </div>
             </div>
             <div class="slider-dots">
-                <span class="dot active" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot active" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+                <span class="dot" onclick="goToSlide(3)"></span>
             </div>
         </div>
     </section>
-    -->
+    
 
     <!-- About Section -->
     <section class="about">
@@ -330,6 +315,157 @@
         </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>แกลเลอรี่ภาพ</h2>
+            <p class="gallery-subtitle">ชมภาพบรรยากาศและสถานที่ต่างๆ ของโฮมสเตย์บีชเกาะช้าง</p>
+            
+            <!-- Gallery Filter -->
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all" onclick="filterGallery('all')">ทั้งหมด</button>
+                <button class="filter-btn" data-filter="rooms" onclick="filterGallery('rooms')">ห้องพัก</button>
+                <button class="filter-btn" data-filter="beach" onclick="filterGallery('beach')">ชายหาด</button>
+                <button class="filter-btn" data-filter="activities" onclick="filterGallery('activities')">กิจกรรม</button>
+                <button class="filter-btn" data-filter="food" onclick="filterGallery('food')">อาหาร</button>
+            </div>
+            
+
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Room Images -->
+                <div class="gallery-item" data-category="rooms">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ห้องสแตนดาร์ด">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>ห้องสแตนดาร์ด</h3>
+                            <p>ห้องพักสะอาด สะดวกสบาย</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="rooms">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ห้องดีลักซ์">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>ห้องดีลักซ์</h3>
+                            <p>วิวทะเลสวยงาม</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="rooms">
+                    <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ห้องแฟมิลี่">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>ห้องแฟมิลี่</h3>
+                            <p>เหมาะสำหรับครอบครัว</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beach Images -->
+                <div class="gallery-item" data-category="beach">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ชายหาดสวยงาม">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>ชายหาดเกาะช้าง</h3>
+                            <p>ทรายขาว น้ำใส</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="beach">
+                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="พระอาทิตย์ตก">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>พระอาทิตย์ตก</h3>
+                            <p>วิวโรแมนติก</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="beach">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ทะเลสวยงาม">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>ทะเลเกาะช้าง</h3>
+                            <p>น้ำใส สีฟ้า</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activities Images -->
+                <div class="gallery-item" data-category="activities">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ดำน้ำดูปะการัง">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>ดำน้ำดูปะการัง</h3>
+                            <p>กิจกรรมยอดนิยม</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="activities">
+                    <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="เรือคายัค">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>เรือคายัค</h3>
+                            <p>ผจญภัยในทะเล</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="activities">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ชมวิว">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>ชมวิว</h3>
+                            <p>พักผ่อนสบายๆ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Images -->
+                <div class="gallery-item" data-category="food">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="อาหารทะเล">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>อาหารทะเล</h3>
+                            <p>สดใหม่ทุกวัน</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="food">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="อาหารเช้า">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>อาหารเช้า</h3>
+                            <p>สไตล์ไทย</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="food">
+                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="เครื่องดื่ม">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>เครื่องดื่ม</h3>
+                            <p>เย็นสดชื่น</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="gallery-load-more">
+                <button class="btn btn-secondary" id="loadMoreBtn">โหลดภาพเพิ่มเติม</button>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -417,6 +553,7 @@
                         <li><a href="#home">หน้าแรก</a></li>
                         <li><a href="#rooms">ห้องพัก</a></li>
                         <li><a href="#packages">แพ็คเกจ</a></li>
+                        <li><a href="#gallery">แกลเลอรี่</a></li>
                         <li><a href="#contact">ติดต่อสอบถาม</a></li>
                     </ul>
                 </div>

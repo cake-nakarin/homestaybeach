@@ -39,9 +39,9 @@ function prevSlide() {
     showSlide(currentSlide -= 1);
 }
 
-function currentSlide(n) {
+window.goToSlide = function(n) {
     showSlide(currentSlide = n);
-}
+};
 
 // Auto slide every 5 seconds
 setInterval(nextSlide, 5000);
@@ -443,3 +443,330 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 }); 
+
+// Gallery Filter Functionality
+function initializeGallery() {
+    console.log('Initializing gallery...');
+    
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    console.log('Found filter buttons:', filterButtons.length);
+    console.log('Found gallery items:', galleryItems.length);
+    
+    // Filter functionality
+    filterButtons.forEach(button => {
+        console.log('Adding click listener to button:', button.textContent);
+        
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            console.log('Filter button clicked:', this.getAttribute('data-filter'));
+            console.log('Button text:', this.textContent);
+            
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const filterValue = this.getAttribute('data-filter');
+            console.log('Filtering by:', filterValue);
+            
+            // Filter gallery items
+            galleryItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                console.log('Item category:', category, 'Filter:', filterValue);
+                
+                if (filterValue === 'all' || category === filterValue) {
+                    item.style.display = 'block';
+                    item.style.animation = 'fadeInUp 0.6s ease';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+        
+        // Add a simple test click to verify the button is clickable
+        button.style.cursor = 'pointer';
+        button.addEventListener('mouseenter', function() {
+            console.log('Mouse entered button:', this.textContent);
+        });
+    });
+    
+    // Gallery item click to enlarge
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img');
+            const title = item.querySelector('h3')?.textContent || '';
+            const description = item.querySelector('p')?.textContent || '';
+            
+            showImageModal(img.src, title, description);
+        });
+    });
+    
+    // Load more functionality
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', () => {
+            // Simulate loading more images
+            loadMoreBtn.textContent = 'กำลังโหลด...';
+            loadMoreBtn.disabled = true;
+            
+            setTimeout(() => {
+                // Add more gallery items here if needed
+                showNotification('ไม่มีภาพเพิ่มเติมในขณะนี้', 'info');
+                loadMoreBtn.textContent = 'โหลดภาพเพิ่มเติม';
+                loadMoreBtn.disabled = false;
+            }, 2000);
+        });
+    }
+}
+
+// Global filter function for onclick events
+window.filterGallery = function(filterValue) {
+    console.log('filterGallery called with:', filterValue);
+    
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    console.log('Found filter buttons:', filterButtons.length);
+    console.log('Found gallery items:', galleryItems.length);
+    
+    // Remove active class from all buttons
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    
+    // Add active class to clicked button
+    filterButtons.forEach(btn => {
+        if (btn.getAttribute('data-filter') === filterValue) {
+            btn.classList.add('active');
+            console.log('Activated button:', btn.textContent);
+        }
+    });
+    
+    // Filter gallery items
+    let visibleCount = 0;
+    galleryItems.forEach(item => {
+        const category = item.getAttribute('data-category');
+        console.log('Checking item with category:', category);
+        
+        if (filterValue === 'all' || category === filterValue) {
+            item.style.display = 'block';
+            item.style.animation = 'fadeInUp 0.6s ease';
+            visibleCount++;
+            console.log('Showing item:', item.querySelector('img')?.alt || 'Unknown');
+        } else {
+            item.style.display = 'none';
+            console.log('Hiding item:', item.querySelector('img')?.alt || 'Unknown');
+        }
+    });
+    
+    console.log('Total visible items:', visibleCount);
+    
+    // Show notification for debugging
+    if (typeof showNotification === 'function') {
+        showNotification(`แสดงภาพ ${visibleCount} รายการ`, 'info');
+    } else {
+        console.log(`แสดงภาพ ${visibleCount} รายการ`);
+    }
+};
+
+// Test function for debugging
+window.testGallery = function() {
+    console.log('=== GALLERY TEST ===');
+    
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    console.log('Filter buttons found:', filterButtons.length);
+    console.log('Gallery items found:', galleryItems.length);
+    
+    filterButtons.forEach((btn, index) => {
+        console.log(`Button ${index + 1}:`, {
+            text: btn.textContent,
+            filter: btn.getAttribute('data-filter'),
+            hasOnclick: btn.hasAttribute('onclick'),
+            onclick: btn.getAttribute('onclick')
+        });
+    });
+    
+    galleryItems.forEach((item, index) => {
+        console.log(`Item ${index + 1}:`, {
+            category: item.getAttribute('data-category'),
+            display: item.style.display,
+            alt: item.querySelector('img')?.alt
+        });
+    });
+    
+    // Test notification
+    if (typeof showNotification === 'function') {
+        showNotification('ตรวจสอบ Console สำหรับข้อมูลการทดสอบ', 'info');
+    } else {
+        alert('ตรวจสอบ Console สำหรับข้อมูลการทดสอบ');
+    }
+};
+
+// Initialize gallery when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing gallery...');
+    // Wait a bit to ensure all elements are loaded
+    setTimeout(() => {
+        initializeGallery();
+    }, 100);
+});
+
+// Also try to initialize on window load as backup
+window.addEventListener('load', function() {
+    console.log('Window loaded, checking gallery...');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    if (filterButtons.length === 0) {
+        console.log('No filter buttons found, retrying...');
+        setTimeout(() => {
+            initializeGallery();
+        }, 500);
+    }
+});
+
+// Image Modal Function
+function showImageModal(imageSrc, title, description) {
+    // Remove existing modal
+    const existingModal = document.querySelector('.image-modal');
+    if (existingModal) {
+        existingModal.remove();
+    }
+    
+    // Create modal
+    const modal = document.createElement('div');
+    modal.className = 'image-modal';
+    modal.innerHTML = `
+        <div class="modal-overlay">
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <img src="${imageSrc}" alt="${title}">
+                <div class="modal-info">
+                    <h3>${title}</h3>
+                    <p>${description}</p>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Add modal styles
+    const modalStyle = document.createElement('style');
+    modalStyle.textContent = `
+        .image-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10000;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 1;
+            transition: background 0.3s ease;
+        }
+        
+        .modal-close:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            max-height: 70vh;
+            object-fit: cover;
+        }
+        
+        .modal-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .modal-info h3 {
+            margin-bottom: 10px;
+            color: var(--dark-gray);
+        }
+        
+        .modal-info p {
+            color: var(--text-gray);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            .modal-content {
+                max-width: 95%;
+                max-height: 95%;
+            }
+            
+            .modal-info {
+                padding: 15px;
+            }
+        }
+    `;
+    
+    document.head.appendChild(modalStyle);
+    document.body.appendChild(modal);
+    
+    // Close modal functionality
+    const closeBtn = modal.querySelector('.modal-close');
+    const overlay = modal.querySelector('.modal-overlay');
+    
+    closeBtn.addEventListener('click', () => {
+        modal.remove();
+    });
+    
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            modal.remove();
+        }
+    });
+    
+    // Close on escape key
+    document.addEventListener('keydown', function closeOnEscape(e) {
+        if (e.key === 'Escape') {
+            modal.remove();
+            document.removeEventListener('keydown', closeOnEscape);
+        }
+    });
+}
